@@ -1,49 +1,105 @@
-#tempo {
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
-   font-size: 20pt;
-   position: absolute;
-   right: 5px;
+:root {
+    --mycolor: grey
+}
+
+#game-over {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 60pt;
+    /* -webkit-text-stroke: 1px orange; */
+    display: none;
 }
 
 main {
     position: fixed;
-    width: 70%;
-    height: 60%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+    width: 800px;
+    height: 600px;
     border: 5px solid black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#1 {
-
+#tempo {
+    position: absolute;
+    right: 3px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20pt;
+    z-index: 1;
 }
 
-#2 {
-
+#um {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    background-color: var(--mycolor);
 }
 
-#3 {
-    
+#dois {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    left: 300px;
+    bottom: 250px;
+    background-color: var(--mycolor);
 }
 
-#4 {
-    
+#tres {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    left: 550px;
+    bottom: 400px;
+    background-color: var(--mycolor);
 }
 
-#5 {
-    
+#quatro {
+    position: relative;
+    width: 100px;
+    height: 250px;
+    left: 0px;
+    bottom: 450px;
+    background-color: var(--mycolor);
 }
 
-#6 {
-    
+#cinco {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    left: 100px;
+    bottom: 750px;
+    background-color: var(--mycolor);
 }
 
-#7 {
-    
+#seis {
+    position: relative;
+    width: 120px;
+    height: 330px;
+    left: 200px;
+    bottom: 1080px;
+    background-color: var(--mycolor);
 }
 
-#8 {
-    
+#sete {
+    position: relative;
+    width: 210px;
+    height: 430px;
+    left: 320px;
+    bottom: 1510px;
+    background-color: var(--mycolor);
+}
+
+#oito {
+    position: relative;
+    width: 270px;
+    height: 170px;
+    left: 530px;
+    bottom: 1680px;
+    background-color: var(--mycolor);
 }

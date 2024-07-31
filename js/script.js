@@ -1,23 +1,28 @@
 const tempo = document.getElementById("tempo")
+const gameOver = document.getElementById("game-over")
 
-var min = 3
+var min = 0
 var seg = 60
 
-var timer = setInterval( function() {
+var timer = setInterval( function(){
     seg--
 
     if( seg == -1 ) {
-        min--
         seg = 59
+        min--
     }
 
     tempo.innerHTML = (seg < 10) ? min + ":0" + seg : min + ":" + seg
 
-    if( min == 0 && seg <= 30 ) {
-        tempo.style.color = "red"
-    }
-    
-    if( min == 0 && seg == 0) {
+    if( seg == 0 && min == 0 ) {
         clearInterval(timer)
+        gameOver.style.display = "block"
     }
+
 }, 1000 )
+
+
+function bateu() {
+    clearInterval(timer)
+    gameOver.style.display = "block"
+}
