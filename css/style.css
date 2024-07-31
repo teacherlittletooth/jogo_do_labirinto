@@ -1,0 +1,49 @@
+#tempo {
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+   font-size: 20pt;
+   position: absolute;
+   right: 5px;
+}
+
+main {
+    position: fixed;
+    width: 70%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid black;
+}
+
+#1 {
+
+}
+
+#2 {
+
+}
+
+#3 {
+    
+}
+
+#4 {
+    
+}
+
+#5 {
+    
+}
+
+#6 {
+    
+}
+
+#7 {
+    
+}
+
+#8 {
+    
+}
