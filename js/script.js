@@ -1,28 +1,47 @@
 const tempo = document.getElementById("tempo")
-const gameOver = document.getElementById("game-over")
+const fim = document.getElementById("fim")
 
-var min = 0
-var seg = 60
-
-var timer = setInterval( function(){
-    seg--
-
-    if( seg == -1 ) {
-        seg = 59
-        min--
-    }
-
-    tempo.innerHTML = (seg < 10) ? min + ":0" + seg : min + ":" + seg
-
-    if( seg == 0 && min == 0 ) {
+function venceu() {
+    if(controle) {
         clearInterval(timer)
-        gameOver.style.display = "block"
+        fim.innerHTML = "Você venceu!"
+        fim.style.display = "block"
     }
-
-}, 1000 )
-
+}
 
 function bateu() {
-    clearInterval(timer)
-    gameOver.style.display = "block"
+    if(controle) {
+        clearInterval(timer)
+        fim.style.display = "block"
+    }
+}
+
+var min = 1
+var seg = 60
+var timer
+var controle = false
+
+function iniciar() {
+    controle = true
+
+    timer = setInterval( function() {
+        seg--
+
+        if( seg == -1 ) {
+            min--
+            seg = 59
+        }
+
+        tempo.innerHTML = (seg < 10) ? min + ":0" + seg : min + ":" + seg
+
+        if( min == 0 && seg == 0 ) {
+            clearInterval(timer)
+            fim.style.display = "block"
+        }
+
+        if( min == 0 && seg <= 10 ) {
+            tempo.style.color = "red"
+        }
+
+    }, 1000 )
 }

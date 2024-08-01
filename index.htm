@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labirinto</title>
+</head>
+<body>
+    
+    <main>
+        <div id="tempo">1:00</div>
+
+        <div id="um" onmouseover="bateu()"></div>
+        <div id="dois" onmouseover="bateu()"></div>
+        <div id="tres" onmouseover="bateu()"></div>
+        <div id="quatro" onmouseover="bateu()"></div>
+        <div id="cinco" onmouseover="bateu()"></div>
+        <div id="seis" onmouseover="bateu()"></div>
+        <div id="sete" onmouseover="bateu()"></div>
+        <div id="oito" onmouseover="bateu()"></div>
+        
+        <div id="start" onmouseleave="iniciar()" ></div>
+        <div id="finish" onmouseleave="venceu()"></div>
+    </main>
+
+
+    <div id="fim"> Game over </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
