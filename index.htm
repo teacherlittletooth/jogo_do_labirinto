@@ -9,23 +9,21 @@
 <body>
     
     <main>
-        <div id="tempo">1:00</div>
+        <div id="timer"> 2:00 </div>
 
-        <div id="um" onmouseover="bateu()"></div>
-        <div id="dois" onmouseover="bateu()"></div>
-        <div id="tres" onmouseover="bateu()"></div>
-        <div id="quatro" onmouseover="bateu()"></div>
-        <div id="cinco" onmouseover="bateu()"></div>
-        <div id="seis" onmouseover="bateu()"></div>
-        <div id="sete" onmouseover="bateu()"></div>
-        <div id="oito" onmouseover="bateu()"></div>
+        <div id="box1" onmouseover="perder()"></div>
+        <div id="box2" onmouseover="perder()"></div>
+        <div id="box3" onmouseover="perder()"></div>
+        <div id="box4" onmouseover="perder()"></div>
+        <div id="box5" onmouseover="perder()"></div>
+        <div id="box6" onmouseover="perder()"></div>
+        <div id="box7" onmouseover="perder()"></div>
         
-        <div id="start" onmouseleave="iniciar()" ></div>
-        <div id="finish" onmouseleave="venceu()"></div>
+        <div id="largada" onmouseleave="iniciar()"></div>
+        <div id="chegada" onmouseleave="ganhar()"></div>
     </main>
 
-
-    <div id="fim"> Game over </div>
+    <div id="fim"> GAME OVER </div>
 
     <script src="js/script.js"></script>
 </body>

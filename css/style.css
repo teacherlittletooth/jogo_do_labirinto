@@ -1,124 +1,118 @@
 :root {
-    --my-color: grey
+    --mycolor: green;
 }
 
 main {
     position: fixed;
     width: 800px;
     height: 600px;
-    border: 5px solid black;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 5px solid black;
 }
 
-#tempo {
-    position: absolute;
-    right: 3px;
-    font-size: 25pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#timer {
     z-index: 1;
+    position: absolute;
+    right: 4px;
+    font-size: 40pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#box1 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 0px;
+    left: 0px;
+    background-color: var(--mycolor);
+}
+
+#box2 {
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    top: 0px;
+    left: 400px;
+    background-color: var(--mycolor);
+}
+
+#box3 {
+    position: absolute;
+    height: 300px;
+    width: 150px;
+    top: 0px;
+    left: 650px;
+    background-color: var(--mycolor);
+}
+
+#box4 {
+    position: absolute;
+    height: 280px;
+    width: 170px;
+    bottom: 0px;
+    right: 0px;
+    background-color: var(--mycolor);
+}
+
+#box5 {
+    position: absolute;
+    height: 380px;
+    width: 210px;
+    bottom: 0px;
+    right: 170px;
+    background-color: var(--mycolor);
+}
+
+#box6 {
+    position: absolute;
+    height: 180px;
+    width: 210px;
+    bottom: 0px;
+    right: 380px;
+    background-color: var(--mycolor);
+}
+
+#box7 {
+    position: absolute;
+    height: 140px;
+    width: 210px;
+    bottom: 0px;
+    right: 590px;
+    background-color: var(--mycolor);
+}
+
+#largada {
+    position: absolute;
+    height: 60px;
+    width: 20px;
+    bottom: 140px;
+    left: -25px;
+    background-color: red;
+    border-right: 5px solid black;
+}
+
+#chegada {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    bottom: 280px;
+    right: -25px;
+    background-color: red;
+    border-left: 5px solid black;
 }
 
 #fim {
     position: fixed;
-    font-size: 40pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 20px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: black;
+    font-size: 50pt;
+    background-color: red;
     color: white;
+    padding: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 15px;
     display: none;
-}
-
-#um {
-    position: absolute;
-    width: 300px;
-    height: 250px;
-    top: 0px;
-    left: 0px;
-    background-color: var(--my-color);
-}
-
-#dois {
-    position: absolute;
-    width: 250px;
-    height: 150px;
-    top: 0px;
-    left: 300px;
-    background-color: var(--my-color);
-}
-
-#tres {
-    position: absolute;
-    width: 250px;
-    height: 400px;
-    top: 0px;
-    left: 550px;
-    background-color: var(--my-color);
-}
-
-#quatro {
-    position: absolute;
-    width: 100px;
-    height: 250px;
-    bottom: 0px;
-    left: 0px;
-    background-color: var(--my-color);
-}
-
-#cinco {
-    position: absolute;
-    width: 100px;
-    height: 300px;
-    bottom: 0px;
-    left: 100px;
-    background-color: var(--my-color);
-}
-
-#seis {
-    position: absolute;
-    width: 120px;
-    height: 330px;
-    bottom: 0px;
-    left: 200px;
-    background-color: var(--my-color);
-}
-
-#sete {
-    position: absolute;
-    width: 210px;
-    height: 430px;
-    bottom: 0px;
-    left: 320px;
-    background-color: var(--my-color);
-}
-
-#oito {
-    position: absolute;
-    width: 270px;
-    height: 185px;
-    bottom: 0px;
-    left: 530px;
-    background-color: var(--my-color);
-}
-
-#start {
-    position: absolute;
-    width: 20px;
-    height: 100px;
-    left: -10px;
-    top: 250px;
-    background-color: black;
-}
-
-#finish {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    right: -10px;
-    top: 400px;
-    background-color: black;
 }

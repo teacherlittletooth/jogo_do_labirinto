@@ -1,47 +1,56 @@
-const tempo = document.getElementById("tempo")
+const timer = document.getElementById("timer")
 const fim = document.getElementById("fim")
 
-function venceu() {
-    if(controle) {
-        clearInterval(timer)
-        fim.innerHTML = "Você venceu!"
-        fim.style.display = "block"
-    }
-}
-
-function bateu() {
-    if(controle) {
-        clearInterval(timer)
-        fim.style.display = "block"
-    }
-}
-
+var controle = false
+var tempo
 var min = 1
 var seg = 60
-var timer
-var controle = false
 
 function iniciar() {
     controle = true
 
-    timer = setInterval( function() {
+    tempo = setInterval(function(){
         seg--
 
-        if( seg == -1 ) {
+        if(seg == -1) {
             min--
             seg = 59
         }
 
-        tempo.innerHTML = (seg < 10) ? min + ":0" + seg : min + ":" + seg
 
-        if( min == 0 && seg == 0 ) {
-            clearInterval(timer)
-            fim.style.display = "block"
+        if( min == 0 && seg == 0 ){
+            perder()
         }
 
-        if( min == 0 && seg <= 10 ) {
-            tempo.style.color = "red"
-        }
+        timer.innerHTML = (seg < 10) ? min + ":0" + seg
+                                     : min + ":" + seg
 
-    }, 1000 )
+    }, 100)
+}
+
+function perder() {
+    if(controle) {
+        fim.style.display = "block"
+        controle = false
+
+        clearInterval(tempo)
+
+        setTimeout(function(){
+            window.location.reload()
+        }, 5000)
+    }
+}
+
+function ganhar() {
+    if(controle) {
+        fim.innerHTML = "VOCÊ VENCEU!"
+        fim.style.display = "block"
+        controle = false
+
+        clearInterval(tempo)
+
+        setTimeout(function(){
+            window.location.reload()
+        }, 5000)
+    }
 }
